@@ -160,29 +160,49 @@
 .stateCitySearchIconsWrapper img {
   width: 5rem;
 }
+.stateCitySearchIconsWrapper p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  opacity: 50%;
+}
 .iconClicked {
   padding: 30px;
   background-color: #def1ff;
 }
 .doctorIcon {
-  padding: 30px;
+  border: 1px solid #f3f6ff;
+  padding: 25px;
   background-color: #f3f6ff;
 }
 .labIcon {
+  border: 1px solid #f3f6ff;
+
   padding: 30px;
   background-color: #f3f6ff;
 }
 .hospitalIcon {
+  border: 1px solid #f3f6ff;
+
   padding: 30px;
   background-color: #f3f6ff;
 }
 .medicalIcon {
+  border: 1px solid #f3f6ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 30px;
   background-color: #f3f6ff;
 }
 .ambulanceIcon {
+  border: 1px solid #f3f6ff;
+
   padding: 30px;
   background-color: #f3f6ff;
+}
+.specialization {
+  background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
 }
 @media screen and (max-width: 768px) {
   .homeNav p {

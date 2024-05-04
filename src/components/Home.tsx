@@ -10,15 +10,8 @@ import Hospitals from "../assets/Hospital.png";
 import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
 import { handleIconClick } from "../Functionality/index.js";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperOne from "../assets/swiperOne.png";
-import SwiperTwo from "../assets/SwiperTwo.png";
-import SwiperThree from "../assets/SwiperThree.png";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import SwiperCustom from "./SwiperCustom.js";
+
 function Home() {
   useEffect(() => {
     handleIconClick();
@@ -82,51 +75,30 @@ function Home() {
             <div className="stateCitySearchIconsWrapper">
               <div className="doctorIcon">
                 <img src={Doctor} alt="" className="doctor" />
+                <p>Doctors</p>
               </div>
               <div className="labIcon">
                 <img src={Labs} alt="" className="lab" />
+                <p>Labs</p>
               </div>
               <div className="hospitalIcon">
                 <img src={Hospitals} alt="" className="hospital" />
+                <p>Hospitals</p>
               </div>
               <div className="medicalIcon">
                 <img src={MedicalStore} alt="" className="medical" />
+                <p>Medical Store</p>
               </div>
               <div className="ambulanceIcon">
                 <img src={Ambulance} alt="" className="ambulance" />
+                <p>Ambulance</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Swiper
-        style={{ padding: "50px", marginTop: "10rem" }}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        pagination={{ clickable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        <SwiperSlide>
-          <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
-        </SwiperSlide>
-      </Swiper>
+      <SwiperCustom />
+      <div className="specialization"></div>
     </div>
   );
 }

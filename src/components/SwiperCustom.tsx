@@ -9,35 +9,34 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 function SwiperCustom() {
   return (
-    // <Swiper
-    //   style={{ padding: "50px", marginTop: "10rem" }}
-    //   modules={[Navigation, Pagination, Scrollbar, A11y]}
-    //   spaceBetween={50}
-    //   slidesPerView={2}
-    //   pagination={{ clickable: true }}
-    //   onSlideChange={() => console.log("slide change")}
-    //   onSwiper={(swiper) => console.log(swiper)}
-    // >
-    //   <SwiperSlide>
-    //     <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
-    //   </SwiperSlide>{" "}
-    //   <SwiperSlide>
-    //     <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
-    //   </SwiperSlide>{" "}
-    //   <SwiperSlide>
-    //     <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
-    //   </SwiperSlide>
-    //   <SwiperSlide>
-    //     <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
-    //   </SwiperSlide>{" "}
-    //   <SwiperSlide>
-    //     <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
-    //   </SwiperSlide>{" "}
-    //   <SwiperSlide>
-    //     <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
-    //   </SwiperSlide>
-    // </Swiper>
-    <p>hi</p>
+    <Swiper
+      style={{ padding: "50px", marginTop: "10rem" }}
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={3}
+      pagination={{ clickable: true }}
+      onSlideChange={() => console.log("slide change")}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide>
+        <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
+      </SwiperSlide>{" "}
+      <SwiperSlide>
+        <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
+      </SwiperSlide>{" "}
+      <SwiperSlide>
+        <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
+      </SwiperSlide>{" "}
+      <SwiperSlide>
+        <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
+      </SwiperSlide>{" "}
+      <SwiperSlide>
+        <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
+      </SwiperSlide>
+    </Swiper>
   );
 }
 

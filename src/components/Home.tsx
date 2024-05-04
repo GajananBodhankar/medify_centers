@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../Styles/home.css";
 import Medify from "../assets/Medify.png";
 import DoctorsImage from "../assets/DoctorImage.png";
@@ -13,7 +13,7 @@ import { handleIconClick } from "../Functionality/index.js";
 import SwiperCustom from "./SwiperCustom.js";
 import { dataArrSpecialization } from "../Functionality/index.js";
 import { useMediaQuery } from "@mui/material";
-import { MenuOutlined } from "@mui/icons-material";
+import CustomList from "./CustomList.js";
 function Home() {
   useEffect(() => {
     handleIconClick();
@@ -31,44 +31,7 @@ function Home() {
       <div className="homeNavSecondThirdWrapper">
         <div className="homeNavSecond">
           <img src={Medify} alt="Image not found" className="medifyImage" />
-          {match && (
-            <ul className="homeNavSecondList">
-              <li>Find Doctors</li>
-              <li>Hospitals</li>
-              <li>Medicines</li>
-              <li>Surgeries</li>
-              <li>Software for Provider</li>
-              <li>Facilities</li>
-              <button>My Bookings</button>
-            </ul>
-          )}
-          <div style={{ position: "relative" }}>
-            {!match && (
-              <MenuOutlined
-                onClick={() => {
-                  let l = document.getElementById("smallUlList");
-                  if (l?.classList.contains("smallUlListHide")) {
-                    l.classList.add("smallUlListShow");
-                    l.classList.remove("smallUlListHide");
-                  } else {
-                    l?.classList.remove("smallUlListShow");
-                    l?.classList.add("smallUlListHide");
-                  }
-                }}
-              />
-            )}
-            <div id="smallUlList" className="smallUlListHide">
-            <ul className="homeNavSecondListSmall">
-              <li>Find Doctors</li>
-              <li>Hospitals</li>
-              <li>Medicines</li>
-              <li>Surgeries</li>
-              <li>Software for Provider</li>
-              <li>Facilities</li>
-              <button>My Bookings</button>
-            </ul>
-            </div>
-          </div>
+          <CustomList match={match} />
         </div>
         <div className="homeNavThird">
           <div className="subHomeNavThird">

@@ -26,6 +26,18 @@ function handleIconClick() {
 
 export let dataArrSpecialization = [dentistry, primarycare, cardio, mri, blood, pisco, Laboratory, xray]
 
+function handleMenuClick() {
+  let l = document.getElementById("smallUlList");
+  if (l?.classList.contains("smallUlListHide")) {
+    l.classList.add("smallUlListShow");
+    l.classList.remove("smallUlListHide");
+  } else {
+    l?.classList.remove("smallUlListShow");
+    l?.classList.add("smallUlListHide");
+  }
+
+}
 export {
-  handleIconClick
+  handleIconClick,
+  handleMenuClick
 };

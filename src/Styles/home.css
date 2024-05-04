@@ -48,6 +48,31 @@
   color: white;
   padding: 7px 20px;
 }
+.homeNavSecondListSmall {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.homeNavSecondListSmall li {
+  border-bottom: 1px solid rgb(122, 122, 122);
+  width: 100%;
+  text-align: center;
+}
+.homeNavSecondListSmall li:hover {
+  cursor: pointer;
+}
+.homeNavSecondListSmall button {
+  background-color: var(--mainbgcolor);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 7px 20px;
+}
 .homeNavThird {
   display: flex;
   align-items: flex-start;
@@ -102,7 +127,8 @@
 .stateCitySearchSubOne {
   display: flex;
   align-items: center;
-  justify-content: end;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 5rem;
 }
 .stateCustomInput {
@@ -153,9 +179,9 @@
 }
 .stateCitySearchIconsWrapper {
   display: flex;
-  gap: 4rem;
+  gap: 5rem;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .stateCitySearchIconsWrapper img {
   width: 5rem;
@@ -234,5 +260,40 @@
 @media screen and (max-width: 768px) {
   .homeNav p {
     font-size: x-small;
+  }
+}
+
+.smallUlListShow {
+  position: absolute;
+  max-height: 10rem;
+  width: max-content;
+  padding: 10px;
+  transform: translate(-50%);
+  border: 1px solid var(--mainbgcolor);
+  overflow: scroll;
+  background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
+  transition: max-height 400ms ease-in-out, border 400ms ease-in-out,
+    padding 400ms ease-in-out;
+}
+.smallUlListHide {
+  position: absolute;
+  max-height: 0rem;
+  width: max-content;
+  transform: translate(-50%);
+  border: 1px solid transparent;
+  overflow: hidden;
+  padding: 0px;
+  background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
+  transition: max-height 400ms ease-in-out, border 400ms ease-in-out,
+    padding 400ms ease-in-out;
+}
+
+@media (max-width: 971px) {
+  .stateCitySearchSubOne {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .stateCitySearchDiv {
+    gap: 20px;
   }
 }

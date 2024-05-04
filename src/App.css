@@ -1,5 +1,6 @@
 :root {
   --mainbgcolor: #2aa7ff;
+  --fontFamily: "Poppins", sans-serif;
 }
 * {
   margin: 0;

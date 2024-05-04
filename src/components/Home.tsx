@@ -11,7 +11,7 @@ import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
 import { handleIconClick } from "../Functionality/index.js";
 import SwiperCustom from "./SwiperCustom.js";
-
+import { dataArrSpecialization } from "../Functionality/index.js";
 function Home() {
   useEffect(() => {
     handleIconClick();
@@ -98,7 +98,16 @@ function Home() {
         </div>
       </div>
       <SwiperCustom />
-      <div className="specialization"></div>
+      <div className="specialization">
+        <p>Find by specialisation</p>
+        <div className="SubSpecialization">
+          {dataArrSpecialization.map((i) => (
+            <div>
+              <img src={i} alt="" />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

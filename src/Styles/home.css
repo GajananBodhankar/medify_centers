@@ -90,14 +90,14 @@
   justify-content: center;
   position: absolute;
   top: 65%;
-  width: 75%;
   flex-direction: column;
-  padding: 70px 100px 20px 100px;
+  left: 70px;
+  right: 70px;
   gap: 5rem;
   border-radius: 5px;
   box-shadow: 6px 6px 35px grey;
-  left: 50%;
-  transform: translate(-50%);
+  box-sizing: border-box;
+  padding: 50px;
 }
 .stateCitySearchSubOne {
   display: flex;

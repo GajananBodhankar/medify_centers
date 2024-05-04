@@ -11,6 +11,9 @@ import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
 import { handleIconClick } from "../Functionality/index.js";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperOne from "../assets/swiperOne.png";
+import SwiperTwo from "../assets/SwiperTwo.png";
+import SwiperThree from "../assets/SwiperThree.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -97,22 +100,32 @@ function Home() {
         </div>
       </div>
       <Swiper
-        style={{ top: "15rem" }}
+        style={{ padding: "50px", marginTop: "10rem" }}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={3}
-        // navigation
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ullam,
+          <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
         </SwiperSlide>
-        <SwiperSlide >Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>
+          <img src={SwiperOne} alt="" style={{ marginTop: "30px" }} />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img src={SwiperTwo} alt="" style={{ marginTop: "30px" }} />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img src={SwiperThree} alt="" style={{ marginTop: "30px" }} />
+        </SwiperSlide>
       </Swiper>
     </div>
   );

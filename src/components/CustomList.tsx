@@ -15,7 +15,7 @@ function CustomList({ match }: any) {
           <button>My Bookings</button>
         </ul>
       )}
-      <div style={{ position: "relative" }}>
+      <div>
         {!match && <MenuOutlined onClick={() => handleMenuClick()} />}
         <div id="smallUlList" className="smallUlListHide">
           <ul className="homeNavSecondListSmall">

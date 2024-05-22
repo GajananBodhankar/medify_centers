@@ -116,8 +116,9 @@
   position: absolute;
   top: 65%;
   flex-direction: column;
-  left: 70px;
-  right: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   gap: 5rem;
   border-radius: 5px;
   box-shadow: 6px 6px 35px grey;

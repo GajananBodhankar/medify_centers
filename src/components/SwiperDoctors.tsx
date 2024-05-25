@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
+import "../Styles/swiper.css";
 import { useMediaQuery } from "@mui/material";
 function SwiperDoctor() {
   const match = useMediaQuery("(max-width: 992px) and (min-width: 600px)");
@@ -27,62 +28,90 @@ function SwiperDoctor() {
     return 4;
   }
   return (
-    <Swiper
-      style={{ padding: "20px" }}
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      spaceBetween={40}
-      speed={1000}
-      autoplay={{
-        delay: 2000,
-      }}
-      slidesPerView={slides()}
-      pagination={{ clickable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>
-        <img
-          src={doctor1}
-          alt=""
-          style={{ marginTop: "30px", width: "100%" }}
-        />
-      </SwiperSlide>{" "}
-      <SwiperSlide>
-        <img
-          src={doctor2}
-          alt=""
-          style={{ marginTop: "30px", width: "100%" }}
-        />
-      </SwiperSlide>{" "}
-      <SwiperSlide>
-        <img
-          src={doctor3}
-          alt=""
-          style={{ marginTop: "30px", width: "100%" }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src={doctor1}
-          alt=""
-          style={{ marginTop: "30px", width: "100%" }}
-        />
-      </SwiperSlide>{" "}
-      <SwiperSlide>
-        <img
-          src={doctor2}
-          alt=""
-          style={{ marginTop: "30px", width: "100%" }}
-        />
-      </SwiperSlide>{" "}
-      <SwiperSlide>
-        <img
-          src={doctor3}
-          alt=""
-          style={{ marginTop: "30px", width: "100%" }}
-        />
-      </SwiperSlide>
-    </Swiper>
+    <>
+      <p className="medicalSpecialistHeader">Our Medical Specialist</p>
+
+      <Swiper
+        style={{ padding: "20px" }}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={40}
+        speed={1000}
+        autoplay={{
+          delay: 2000,
+        }}
+        slidesPerView={slides()}
+        pagination={{ clickable: true }}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide>
+          <img
+            src={doctor1}
+            alt=""
+            style={{ marginTop: "30px", width: "100%" }}
+          />
+          <div className="medicalSpecialistNames">
+            <p>Dr. Ahmad Khan</p>
+            <p>Neurologist</p>
+          </div>
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            src={doctor2}
+            alt=""
+            style={{ marginTop: "30px", width: "100%" }}
+          />
+          <div className="medicalSpecialistNames">
+            <p>Dr. Ankur Sharma</p>
+            <p>Medicine</p>
+          </div>
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            src={doctor3}
+            alt=""
+            style={{ marginTop: "30px", width: "100%" }}
+          />
+          <div className="medicalSpecialistNames">
+            <p>Dr. Heena Sachdeva</p>
+            <p>Orthopadics</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={doctor1}
+            alt=""
+            style={{ marginTop: "30px", width: "100%" }}
+          />
+          <div className="medicalSpecialistNames">
+            <p>Dr. Ahmad Khan</p>
+            <p>Neurologist</p>
+          </div>
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            src={doctor2}
+            alt=""
+            style={{ marginTop: "30px", width: "100%" }}
+          />
+          <div className="medicalSpecialistNames">
+            <p>Dr. Ankur Sharma</p>
+            <p>Medicine</p>
+          </div>
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            src={doctor3}
+            alt=""
+            style={{ marginTop: "30px", width: "100%" }}
+          />
+          <div className="medicalSpecialistNames">
+            <p>Dr. Heena Sachdeva</p>
+            <p>Orthopadics</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 }
 

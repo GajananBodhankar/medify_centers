@@ -9,6 +9,7 @@ import Doctor from "../assets/Doctor.png";
 import Hospitals from "../assets/Hospital.png";
 import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
+import patientImage from "../assets/PatientImage.png";
 import {
   ApiCall,
   getCitiesApiCall,
@@ -19,6 +20,7 @@ import { dataArrSpecialization } from "../Functionality/index.js";
 import { useMediaQuery } from "@mui/material";
 import CustomList from "./CustomList.js";
 import SwiperDoctor from "./SwiperDoctors.js";
+import "../Styles/patientCaring.css";
 function Home() {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
@@ -135,6 +137,14 @@ function Home() {
         </div>
       </div>
       <SwiperDoctor />
+      <div className="patientMainContainer">
+        <div className="patientCaringImages">
+          <img src={patientImage} alt="" />
+        </div>
+        <div className="patientCaringTexts">
+          <p>HELPING PATIENTS FROM AROUND THE GLOBE!!</p>
+        </div>
+      </div>
     </div>
   );
 }

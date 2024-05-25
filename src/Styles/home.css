@@ -15,7 +15,7 @@
 }
 .homeNavSecondThirdWrapper {
   padding: 0px 70px;
-  background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
+  background: linear-gradient(to bottom, #e7f0ff 85%, #ffff 10%);
   height: max-content;
   position: relative;
 }
@@ -78,6 +78,19 @@
   align-items: flex-start;
   gap: 100px;
 }
+@media screen and (max-width: 1142px) {
+  .homeNavThird {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .subHomeNavThird {
+    padding-top: 20px !important;
+  }
+  .homeNavThird > img {
+    width: 60% !important;
+  }
+}
 .subHomeNavThird {
   display: flex;
   padding-top: 100px;
@@ -87,12 +100,13 @@
 .subHomeNavThird > p {
   font-family: "Poppins", sans-serif;
   color: #102851;
+  font-size: large;
 }
 .subHomeNavThird > p > span {
   font-family: "Poppins", sans-serif;
   color: #102851;
   font-weight: 700;
-  font-size: xx-large;
+  font-size: 3rem;
 }
 .subHomeNavThird > p:nth-child(2) {
   color: #5c6169;
@@ -103,22 +117,21 @@
   border-radius: 4px;
   color: white;
   padding: 10px 20px;
+  font-size: large;
   width: max-content;
 }
 .homeNavThird > img {
-  width: 50%;
+  width: 40%;
   height: max-content;
 }
 .stateCitySearchDiv {
   background-color: white;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 65%;
+  position: relative;
+  /* bottom: 20rem; */
   flex-direction: column;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
+  width: 100%;
   gap: 5rem;
   border-radius: 5px;
   box-shadow: 6px 6px 35px grey;
@@ -127,15 +140,14 @@
 }
 .stateCitySearchSubOne {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 5rem;
+  /*
+  flex-wrap: wrap;
+  gap: 5rem; */
 }
 .stateCustomInput {
   color: grey;
   display: flex;
-  width: max-content;
   background-color: #f0f0f0;
   align-items: center;
   border: 1px solid #dfdfdf;
@@ -191,6 +203,14 @@
   font-family: "Poppins", sans-serif;
   text-align: center;
   opacity: 50%;
+}
+@media (width<=1290px) {
+  .stateCitySearchIconsWrapper {
+    gap: 2rem;
+  }
+  .stateCitySearchDiv {
+    gap: 2rem;
+  }
 }
 .iconClicked {
   padding: 30px;
@@ -272,9 +292,10 @@
   transform: translate(-50%);
   border: 1px solid var(--mainbgcolor);
   overflow: scroll;
-  background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
-  transition: max-height 400ms ease-in-out, border 400ms ease-in-out,
-    padding 400ms ease-in-out;
+  background-color: #ffff;
+  /* transition: max-height 400ms ease-in-out, border 400ms ease-in-out,
+    padding 400ms ease-in-out; */
+  transition: all 400ms ease-in-out;
 }
 .smallUlListHide {
   position: absolute;
@@ -284,15 +305,20 @@
   border: 1px solid transparent;
   overflow: hidden;
   padding: 0px;
-  background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
-  transition: max-height 400ms ease-in-out, border 400ms ease-in-out,
-    padding 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  /* transition: max-height 400ms ease-in-out, border 400ms ease-in-out,
+    padding 400ms ease-in-out; */
 }
 
 @media (max-width: 971px) {
   .stateCitySearchSubOne {
     gap: 10px;
     flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  .stateCustomInput {
+    width: 70%;
   }
   .stateCitySearchDiv {
     gap: 20px;

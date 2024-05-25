@@ -3,7 +3,7 @@ import { handleMenuClick } from "../Functionality";
 
 function CustomList({ match }: any) {
   return (
-    <>
+    <div style={{overflow:'hidden'}}>
       {match && (
         <ul className="homeNavSecondList">
           <li>Find Doctors</li>
@@ -29,7 +29,7 @@ function CustomList({ match }: any) {
           </ul>
         </div>
       </div>
-    </>
+    </div >
   );
 }
 

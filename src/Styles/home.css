@@ -19,6 +19,11 @@
   height: max-content;
   position: relative;
 }
+@media (width <= 768px) {
+  .homeNavSecondThirdWrapper {
+    padding: 0px 20px;
+  }
+}
 .homeNavSecond {
   display: flex;
   padding: 20px 0px;
@@ -265,6 +270,15 @@
   text-align: center;
   font-size: 3rem;
 }
+@media screen and (max-width: 768px) {
+  .specialization {
+    gap: 20px;
+    padding: 50px 20px;
+  }
+  .specialization > p {
+    font-size: 2rem;
+  }
+}
 .SubSpecialization {
   display: flex;
   gap: 30px;
@@ -293,7 +307,7 @@
   max-height: 10rem;
   width: max-content;
   padding: 10px;
-  transform: translate(-50%);
+  transform: translate(-80%);
   border: 1px solid var(--mainbgcolor);
   overflow: scroll;
   background-color: #ffff;
@@ -305,7 +319,7 @@
   position: absolute;
   max-height: 0rem;
   width: max-content;
-  transform: translate(-50%);
+  transform: translate(-80%);
   border: 1px solid transparent;
   overflow: hidden;
   padding: 0px;

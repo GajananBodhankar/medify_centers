@@ -21,7 +21,7 @@ function SwiperCustom() {
   }
   return (
     <Swiper
-      style={{ padding: "50px" }}
+      style={{ padding: "20px" }}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={slides()}

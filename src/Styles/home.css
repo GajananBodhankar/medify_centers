@@ -30,6 +30,26 @@
   align-items: center;
   justify-content: space-between;
 }
+.underlineHover {
+  position: relative;
+  display: inline-block;
+}
+.underlineHover::after {
+  content: " ";
+  background-color: var(--mainbgcolor);
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 1.5rem;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 200ms ease-in-out;
+}
+.underlineHover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 .medifyImage {
   width: 6rem;
   height: auto;

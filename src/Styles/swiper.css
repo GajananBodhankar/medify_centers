@@ -27,4 +27,7 @@
   .medicalSpecialistNames > p:nth-child(2) {
     font-size: small;
   }
+  .medicalSpecialistHeader {
+    font-size: 2rem;
+  }
 }

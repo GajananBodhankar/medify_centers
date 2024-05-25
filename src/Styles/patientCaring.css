@@ -1,15 +1,23 @@
 .patientMainContainer {
   background: linear-gradient(to bottom, #e7f0ff, #e8f1ff78);
   display: flex;
-  padding: 5rem 40px;
+  padding: 5rem 12rem;
   position: relative;
   gap: 5rem;
+  align-items: center;
+  margin-top: 1rem;
 }
 .patientCaringImages {
   width: 50%;
 }
 .patientCaringImages > img {
   width: 100%;
+}
+.patientCaringTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
 }
 .patientCaringTexts > p:first-child {
   color: #2aa7ff;
@@ -18,4 +26,65 @@
   font-weight: 600;
   line-height: 27px;
   text-align: left;
+}
+.patientCaringTexts > p:nth-child(2) {
+  color: #1b3c74;
+  font-family: Poppins;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+}
+.patientCaringTexts > p > span:first-child {
+  color: #2aa7ff;
+  font-family: Poppins;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+}
+.patientCaringTexts > p:nth-child(3) {
+  color: #77829d;
+  font-family: Poppins;
+  font-size: medium;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+}
+.patientCaringTexts > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.patientCaringTexts > div > p {
+  color: #1b3c74;
+  font-family: Poppins;
+  font-size: medium;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+}
+.patientCaringTexts > div > img {
+  width: 1rem;
+  height: max-content;
+}
+
+@media screen and (max-width: 768px) {
+  .patientMainContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .patientCaringImages {
+    width: max-content !important;
+  }
+  .patientCaringTexts {
+    width: max-content !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .patientMainContainer {
+    padding: 5rem 1rem;
+    gap: 2.2rem;
+  }
 }

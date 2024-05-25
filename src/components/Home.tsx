@@ -10,6 +10,7 @@ import Hospitals from "../assets/Hospital.png";
 import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
 import patientImage from "../assets/PatientImage.png";
+import tick from "../assets/tick.png";
 import {
   ApiCall,
   getCitiesApiCall,
@@ -143,6 +144,26 @@ function Home() {
         </div>
         <div className="patientCaringTexts">
           <p>HELPING PATIENTS FROM AROUND THE GLOBE!!</p>
+          <p>
+            Patient <span>Caring</span>
+          </p>
+          <p>
+            Our goal is to deliver quality of care in a courteous, respectful,
+            and compassionate manner. We hope you will allow us to care for you
+            and strive to be the first and best choice for healthcare.
+          </p>
+          <div>
+            <img src={tick} alt="" />
+            <p>Stay Updated About Your Health</p>
+          </div>
+          <div>
+            <img src={tick} alt="" />
+            <p>Check Your Results Online</p>
+          </div>
+          <div>
+            <img src={tick} alt="" />
+            <p>Manage Your Appointments</p>
+          </div>
         </div>
       </div>
     </div>

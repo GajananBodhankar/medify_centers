@@ -6,6 +6,9 @@ import mri from '../assets/MRI.png'
 import pisco from '../assets/pisco.png'
 import Laboratory from '../assets/laboratory.png'
 import blood from '../assets/blood.png'
+import {
+  ENDPOINT
+} from '../../config';
 
 function handleIconClick() {
   let icons = document.querySelector(".stateCitySearchIconsWrapper");
@@ -37,7 +40,29 @@ function handleMenuClick() {
   }
 
 }
+
+async function ApiCall(setStates) {
+  try {
+    let result = await fetch(`${ENDPOINT}/states`)
+    let data = await result.json()
+    setStates(data)
+  } catch (error) {
+
+    console.log(error)
+  }
+}
+async function getCitiesApiCall(state, setCities) {
+  try {
+    let result = await fetch(`${ENDPOINT}/cities/${state}`)
+    let data = await result.json()
+    setCities(data)
+  } catch (error) {
+    console.log(error)
+  }
+}
 export {
   handleIconClick,
-  handleMenuClick
+  handleMenuClick,
+  ApiCall,
+  getCitiesApiCall
 };

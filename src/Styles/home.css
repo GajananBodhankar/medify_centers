@@ -167,7 +167,7 @@
   font-family: "Poppins", sans-serif;
   padding: 10px;
   color: #5c6169;
-  flex-grow: 1;
+  width: 100%;
 }
 
 .stateCustomInput > img {
@@ -213,6 +213,7 @@
   text-align: center;
   opacity: 50%;
 }
+/* check line no 306 */
 @media (width<=1290px) {
   .stateCitySearchIconsWrapper {
     gap: 2rem;
@@ -257,6 +258,13 @@
   padding: 30px;
   background-color: #f3f6ff;
 }
+.commonForLookingIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7.1rem;
+}
 .specialization {
   background: linear-gradient(to left, #e7f0ff, #e8f1ff78);
   padding: 50px 100px;
@@ -295,6 +303,21 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+}
+@media (width<=768px) {
+  .stateCitySearchIconsWrapper img {
+    width: 2rem;
+  }
+  .SubSpecialization > div {
+    width: 5rem;
+    padding: 10px 20px;
+  }
+  .SubSpecialization {
+    padding: 0px 20px;
+  }
+  .commonForLookingIcon {
+    padding: 1rem !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .homeNav p {

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../Styles/home.css";
 import Medify from "../assets/Medify.png";
 import DoctorsImage from "../assets/DoctorImage.png";
@@ -9,14 +9,22 @@ import Doctor from "../assets/Doctor.png";
 import Hospitals from "../assets/Hospital.png";
 import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
-import { handleIconClick } from "../Functionality/index.js";
+import {
+  ApiCall,
+  getCitiesApiCall,
+  handleIconClick,
+} from "../Functionality/index.js";
 import SwiperCustom from "./SwiperCustom.js";
 import { dataArrSpecialization } from "../Functionality/index.js";
 import { useMediaQuery } from "@mui/material";
 import CustomList from "./CustomList.js";
+import SwiperDoctor from "./SwiperDoctors.js";
 function Home() {
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([]);
   useEffect(() => {
     handleIconClick();
+    ApiCall(setStates);
   }, []);
   const match = useMediaQuery("(min-width: 1025px)");
   return (
@@ -54,19 +62,34 @@ function Home() {
           <div className="stateCitySearchSubOne">
             <div className="stateCustomInput">
               <img src={SearchIconGrey} alt="" />
-              <select name="" id="">
-                <option value="State" selected disabled>
+              <select
+                name=""
+                id=""
+                onChange={(e) => getCitiesApiCall(e.target.value, setCities)}
+                defaultValue={"State"}
+              >
+                <option value="State" disabled>
                   State
                 </option>
+                {states.map((i, j) => (
+                  <option value={i} key={`${i}${j}`}>
+                    {i}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="stateCustomInput">
               <img src={SearchIconGrey} alt="" />
-              <select name="" id="">
-                <option value="City" selected disabled>
+              <select name="" id="" defaultValue={"City"}>
+                <option value="City" disabled>
                   City
                 </option>
-              </select> 
+                {cities.map((i, j) => (
+                  <option value={i} key={`${i}${j}`}>
+                    {i}
+                  </option>
+                ))}
+              </select>
             </div>
             <button>
               <img src={SearchIcon} alt="" />
@@ -76,23 +99,23 @@ function Home() {
           <div className="stateCitySearchSubTwo">
             <p>You may be looking for</p>
             <div className="stateCitySearchIconsWrapper">
-              <div className="doctorIcon">
+              <div className="doctorIcon commonForLookingIcon">
                 <img src={Doctor} alt="" className="doctor" />
                 <p>Doctors</p>
               </div>
-              <div className="labIcon">
+              <div className="labIcon commonForLookingIcon">
                 <img src={Labs} alt="" className="lab" />
                 <p>Labs</p>
               </div>
-              <div className="hospitalIcon">
+              <div className="hospitalIcon commonForLookingIcon">
                 <img src={Hospitals} alt="" className="hospital" />
                 <p>Hospitals</p>
               </div>
-              <div className="medicalIcon">
+              <div className="medicalIcon commonForLookingIcon">
                 <img src={MedicalStore} alt="" className="medical" />
                 <p>Medical Store</p>
               </div>
-              <div className="ambulanceIcon">
+              <div className="ambulanceIcon commonForLookingIcon">
                 <img src={Ambulance} alt="" className="ambulance" />
                 <p>Ambulance</p>
               </div>
@@ -104,13 +127,14 @@ function Home() {
       <div className="specialization">
         <p>Find by specialisation</p>
         <div className="SubSpecialization">
-          {dataArrSpecialization.map((i) => (
-            <div>
-              <img src={i} alt="" />
+          {dataArrSpecialization.map((i, j) => (
+            <div key={`${i}${j}`}>
+              <img src={i} alt="" width={"100%"} />
             </div>
           ))}
         </div>
       </div>
+      <SwiperDoctor />
     </div>
   );
 }

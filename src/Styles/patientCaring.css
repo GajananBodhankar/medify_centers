@@ -1,0 +1,21 @@
+.patientMainContainer {
+  background: linear-gradient(to bottom, #e7f0ff, #e8f1ff78);
+  display: flex;
+  padding: 5rem 40px;
+  position: relative;
+  gap: 5rem;
+}
+.patientCaringImages {
+  width: 50%;
+}
+.patientCaringImages > img {
+  width: 100%;
+}
+.patientCaringTexts > p:first-child {
+  color: #2aa7ff;
+  font-family: Poppins;
+  font-size: large;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: left;
+}

@@ -54,11 +54,19 @@ function Home() {
           <div className="stateCitySearchSubOne">
             <div className="stateCustomInput">
               <img src={SearchIconGrey} alt="" />
-              <input type="text" placeholder="State" />
+              <select name="" id="">
+                <option value="State" selected disabled>
+                  State
+                </option>
+              </select>
             </div>
             <div className="stateCustomInput">
               <img src={SearchIconGrey} alt="" />
-              <input type="text" placeholder="City" />
+              <select name="" id="">
+                <option value="City" selected disabled>
+                  City
+                </option>
+              </select> 
             </div>
             <button>
               <img src={SearchIcon} alt="" />

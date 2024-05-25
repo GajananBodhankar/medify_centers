@@ -152,19 +152,23 @@
   align-items: center;
   border: 1px solid #dfdfdf;
   padding: 0px 10px;
+  width: 30%;
+  border-radius: 4px;
 }
-.stateCustomInput > input {
+.stateCustomInput > select {
   border: none;
   outline: none;
   background: transparent;
   font-family: "Poppins", sans-serif;
   padding: 10px;
+  color: #5c6169;
+  flex-grow: 1;
 }
 
 .stateCustomInput > img {
   height: max-content;
 }
-.stateCustomInput > input:focus {
+.stateCustomInput > select:focus {
   border: none;
   outline: none;
 }

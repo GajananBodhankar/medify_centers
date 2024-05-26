@@ -432,8 +432,51 @@
   background: linear-gradient(to left, #e7f0ff, #e8f1ff);
 }
 
+.frequentlyAskedMainContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+.frequentlyAskedHeader {
+  display: flex;
+  flex-direction: column;
+}
+.frequentlyAskedHeader > p:first-child {
+  text-align: center;
+  color: #2aa7ff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: medium;
+}
+.frequentlyAskedHeader > p:nth-child(2) {
+  text-align: center;
+  color: #1b3c74;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+.frequentlyAskedContent {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.frequentlyAskedContent > img {
+  width: 50%;
+}
+@media screen and (max-width: 1150px) {
+  .frequentlyAskedContent {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .frequentlyAskedContent > img {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .blogsAndNewsHeader > p:nth-child(2) {
+  .blogsAndNewsHeader > p:nth-child(2),
+  .frequentlyAskedHeader > p:nth-child(2) {
     font-size: 2rem;
   }
   .blogsAndNewsImages {
@@ -448,4 +491,20 @@
   .familiesMainContainer {
     gap: 2rem;
   }
+}
+
+.MuiAccordionSummary-content {
+  font-family: "Poppins", sans-serif;
+  color: #102851;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.appMainContainer {
+  background: linear-gradient(to left, #e7f0ff, #e8f1ff);
+  display: flex;
+}
+.appImages {
+  width: 50%;
+  position: relative;
 }

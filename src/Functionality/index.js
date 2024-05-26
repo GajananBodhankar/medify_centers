@@ -6,9 +6,11 @@ import mri from '../assets/MRI.png'
 import pisco from '../assets/pisco.png'
 import Laboratory from '../assets/laboratory.png'
 import blood from '../assets/blood.png'
+import plus from '../assets/plus.png'
 import {
   ENDPOINT
 } from '../../config';
+import React from 'react';
 
 function handleIconClick() {
   let icons = document.querySelector(".stateCitySearchIconsWrapper");
@@ -60,9 +62,22 @@ async function getCitiesApiCall(state, setCities) {
     console.log(error)
   }
 }
+
+function changeIcon() {
+  let svg = document.querySelectorAll('.MuiAccordionSummary-expandIconWrapper')
+  svg.forEach(i => {
+    let icon = document.createElement('img')
+    icon.src = plus
+    icon.setAttribute('style', 'width:100%')
+    i.innerHTML = ''
+    i.appendChild(icon)
+  })
+  console.log(svg)
+}
 export {
   handleIconClick,
   handleMenuClick,
   ApiCall,
-  getCitiesApiCall
+  getCitiesApiCall,
+  changeIcon
 };

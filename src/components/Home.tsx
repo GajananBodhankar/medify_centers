@@ -14,8 +14,12 @@ import tick from "../assets/tick.png";
 import blogsImage from "../assets/doctorBlogs.png";
 import familyOne from "../assets/familyOne.png";
 import familyTwo from "../assets/families.png";
+import frequentlyAsked from "../assets/frequentlyAskedImage.png";
+import mobileScreen from "../assets/MobileImage.png";
+import mobileImage from "../assets/MobileInnerImage.png";
 import {
   ApiCall,
+  changeIcon,
   getCitiesApiCall,
   handleIconClick,
 } from "../Functionality/index.js";
@@ -25,12 +29,14 @@ import { useMediaQuery } from "@mui/material";
 import CustomList from "./CustomList.js";
 import SwiperDoctor from "./SwiperDoctors.js";
 import "../Styles/patientCaring.css";
+import AccordionUsage from "./Accordion.js";
 function Home() {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
   useEffect(() => {
     handleIconClick();
     ApiCall(setStates);
+    changeIcon();
   }, []);
   const match = useMediaQuery("(min-width: 1025px)");
   return (
@@ -183,6 +189,69 @@ function Home() {
       <div className="familiesMainContainer">
         <img src={familyOne} alt="" />
         <img src={familyTwo} alt="" />
+      </div>
+      <div className="frequentlyAskedMainContainer">
+        <div className="frequentlyAskedHeader">
+          <p>Get Your Answer</p>
+          <p>Frequently Asked Questions</p>
+        </div>
+        <div className="frequentlyAskedContent">
+          <img src={frequentlyAsked} alt="" />
+          <AccordionUsage />
+        </div>
+      </div>
+      <div className="appMainContainer">
+        <div className="appImages">
+          <img
+            src={mobileScreen}
+            alt=""
+            style={{
+              top: "17%",
+              position: "relative",
+              left: "15%",
+              width: "50%",
+              zIndex: "1",
+            }}
+          />
+          <img
+            src={mobileImage}
+            style={{
+              position: "absolute",
+              left: "16.5%",
+              top: "24%",
+              zIndex: "10",
+              width: "47.5%",
+              borderTopRightRadius: "20px",
+              borderTopLeftRadius: "20px",
+            }}
+            alt=""
+          />
+          <img
+            src={mobileScreen}
+            alt=""
+            style={{
+              width: "50%",
+            }}
+          />
+          <img
+            src={mobileImage}
+            style={{
+              position: "absolute",
+              left: "51.5%",
+              top: "7%",
+              borderTopRightRadius: "20px",
+              borderTopLeftRadius: "20px",
+              width: "47.5%",
+
+              height: "90%",
+            }}
+            alt=""
+          />
+        </div>
+        <div className="appContent">
+          <p>Download the</p>
+          <p>Medify App</p>
+        </div>
       </div>
     </div>
   );

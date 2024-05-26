@@ -11,6 +11,9 @@ import Labs from "../assets/Drugstore.png";
 import MedicalStore from "../assets/Capsule.png";
 import patientImage from "../assets/PatientImage.png";
 import tick from "../assets/tick.png";
+import blogsImage from "../assets/doctorBlogs.png";
+import familyOne from "../assets/familyOne.png";
+import familyTwo from "../assets/families.png";
 import {
   ApiCall,
   getCitiesApiCall,
@@ -165,6 +168,21 @@ function Home() {
             <p>Manage Your Appointments</p>
           </div>
         </div>
+      </div>
+      <div className="blogsAndNews">
+        <div className="blogsAndNewsHeader">
+          <p>Blogs & News</p>
+          <p>Read Our Latest News</p>
+        </div>
+        <div className="blogsAndNewsImages">
+          <img src={blogsImage} alt="" />
+          <img src={blogsImage} alt="" />
+          <img src={blogsImage} alt="" />
+        </div>
+      </div>
+      <div className="familiesMainContainer">
+        <img src={familyOne} alt="" />
+        <img src={familyTwo} alt="" />
       </div>
     </div>
   );

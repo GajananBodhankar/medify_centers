@@ -74,10 +74,23 @@ function changeIcon() {
   })
   console.log(svg)
 }
+
+function buttonHover() {
+  let btn = document.querySelector(".appInputContainer>button");
+  btn.addEventListener('mouseover', (e) => {
+
+    btn.classList.add('smsBtnHover')
+  })
+  btn.addEventListener('mouseout', e => {
+    btn.classList.remove('smsBtnHover')
+  })
+  console.log(btn);
+}
 export {
   handleIconClick,
   handleMenuClick,
   ApiCall,
   getCitiesApiCall,
-  changeIcon
+  changeIcon,
+  buttonHover
 };

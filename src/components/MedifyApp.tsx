@@ -1,4 +1,3 @@
-import React from "react";
 import mobileScreen from "../assets/MobileImage.png";
 import mobileImage from "../assets/MobileInnerImage.png";
 function MedifyApp() {

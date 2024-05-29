@@ -1,14 +1,15 @@
 import mobileScreen from "../assets/MobileImage.png";
 import mobileImage from "../assets/MobileInnerImage.png";
+import MobileImageSmall from "../assets/MobileImageSmall.png";
 function MedifyApp() {
   return (
     <div className="appMainContainer">
       <div className="appImages">
         <img
-          src={mobileScreen}
+          src={MobileImageSmall}
           alt=""
           style={{
-            top: "17%",
+            top: "15%",
             position: "relative",
             left: "15%",
             width: "50%",
@@ -20,7 +21,7 @@ function MedifyApp() {
           style={{
             position: "absolute",
             left: "16.5%",
-            top: "24%",
+            top: "28%",
             zIndex: "10",
             width: "47.5%",
             borderTopRightRadius: "20px",
@@ -33,6 +34,8 @@ function MedifyApp() {
           alt=""
           style={{
             width: "50%",
+            position: "relative",
+            top: "7%",
           }}
         />
         <img
@@ -40,11 +43,11 @@ function MedifyApp() {
           style={{
             position: "absolute",
             left: "51.5%",
-            top: "7%",
+            top: "14%",
             borderTopRightRadius: "20px",
             borderTopLeftRadius: "20px",
             width: "47.5%",
-            height: "90%",
+            height: "92%",
           }}
           alt=""
         />

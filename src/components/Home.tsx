@@ -203,6 +203,15 @@ function Home() {
         </div>
       </div>
       <MedifyApp />
+      <div
+        style={{
+          padding: "30px",
+          backgroundColor: "red",
+          zIndex: 100,
+          position: "relative",
+          bottom: 0,
+        }}
+      ></div>
     </div>
   );
 }

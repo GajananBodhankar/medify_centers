@@ -6,5 +6,8 @@ const Router = createBrowserRouter([
     Component: Home,
     path: "/",
   },
+  {
+    
+  }
 ]);
 export default Router;

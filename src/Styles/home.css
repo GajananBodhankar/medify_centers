@@ -603,6 +603,23 @@
     width: 100%;
   }
   .appContent {
+    margin-top: 4rem;
     width: 100%;
   }
+  .appImages>img:nth-child(2){
+    height: 85%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .appContent > p:first-child,.appContent> p:nth-child(2){
+    font-size: x-large;
+  }
+}
+.playStoreIcons {
+  display: flex;
+  gap: 1rem;
+}
+.playStoreIcons img {
+  width: 25%;
+  height: max-content;
 }

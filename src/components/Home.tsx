@@ -31,6 +31,7 @@ import SwiperDoctor from "./SwiperDoctors.js";
 import "../Styles/patientCaring.css";
 import AccordionUsage from "./Accordion.js";
 import MedifyApp from "./MedifyApp.js";
+import Footer from "./Footer.js";
 function Home() {
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
@@ -203,15 +204,7 @@ function Home() {
         </div>
       </div>
       <MedifyApp />
-      <div
-        style={{
-          padding: "30px",
-          backgroundColor: "red",
-          zIndex: 100,
-          position: "relative",
-          bottom: 0,
-        }}
-      ></div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import mobileScreen from "../assets/MobileImage.png";
 import mobileImage from "../assets/MobileInnerImage.png";
 import MobileImageSmall from "../assets/MobileImageSmall.png";
+import googlePlay from "../assets/google_play.png.png";
+import appleStore from "../assets/apple_store.png.png";
 function MedifyApp() {
   return (
     <div className="appMainContainer">
@@ -64,6 +66,10 @@ function MedifyApp() {
             <input type="tel" placeholder="Enter phone number" required />
           </div>
           <button>Send SMS</button>
+        </div>
+        <div className="playStoreIcons">
+          <img src={googlePlay} alt="" />
+          <img src={appleStore} alt="" />
         </div>
       </div>
     </div>

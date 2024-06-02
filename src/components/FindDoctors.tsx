@@ -1,4 +1,10 @@
+import { useMediaQuery } from "@mui/material";
+import CustomList from "./CustomList";
+import Medify from "../assets/Medify.png";
+import "../Styles/findDoctor.css";
 function FindDoctors() {
+  const match = useMediaQuery("(min-width: 1025px)");
+
   return (
     <div className="mainHomeContainer">
       <nav className="homeNav">
@@ -8,6 +14,10 @@ function FindDoctors() {
           cleanliness.
         </p>
       </nav>
+      <div className="homeNavSecond doctorNavSecond">
+        <img src={Medify} alt="Image not found" className="medifyImage" />
+        <CustomList match={match} />
+      </div>
     </div>
   );
 }

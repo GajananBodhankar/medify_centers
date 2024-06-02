@@ -1,12 +1,16 @@
 import { MenuOutlined } from "@mui/icons-material";
 import { handleMenuClick } from "../Functionality";
+import { useNavigate } from "react-router-dom";
 
 function CustomList({ match }: any) {
+  const navigate = useNavigate();
   return (
     <div style={{ overflow: "hidden" }}>
       {match && (
         <ul className="homeNavSecondList">
-          <li className="underlineHover">Find Doctors</li>
+          <li className="underlineHover" onClick={() => navigate("/doctors")}>
+            Find Doctors
+          </li>
           <li className="underlineHover">Hospitals</li>
           <li className="underlineHover">Medicines</li>
           <li className="underlineHover">Surgeries</li>
@@ -19,7 +23,7 @@ function CustomList({ match }: any) {
         {!match && <MenuOutlined onClick={() => handleMenuClick()} />}
         <div id="smallUlList" className="smallUlListHide">
           <ul className="homeNavSecondListSmall">
-            <li>Find Doctors</li>
+            <li onClick={() => navigate("/doctors")}>Find Doctors</li>
             <li>Hospitals</li>
             <li>Medicines</li>
             <li>Surgeries</li>

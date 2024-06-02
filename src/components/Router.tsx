@@ -6,7 +6,7 @@ const Router = createBrowserRouter([
     Component: Home,
     path: "/",
   },
-  {
+  
     
   }
 ]);

@@ -37,11 +37,11 @@
 .underlineHover::after {
   content: " ";
   background-color: var(--mainbgcolor);
-  height: 5px;
+  height: 1px;
   width: 100%;
   position: absolute;
-  left: 0px;
-  top: 1.5rem;
+  left: 0;
+  bottom: 0px;
   transform-origin: right;
   transform: scaleX(0);
   transition: transform 200ms ease-in-out;
@@ -606,12 +606,13 @@
     margin-top: 4rem;
     width: 100%;
   }
-  .appImages>img:nth-child(2){
+  .appImages > img:nth-child(2) {
     height: 85%;
   }
 }
 @media screen and (max-width: 650px) {
-  .appContent > p:first-child,.appContent> p:nth-child(2){
+  .appContent > p:first-child,
+  .appContent > p:nth-child(2) {
     font-size: x-large;
   }
 }

@@ -5,3 +5,21 @@
 .doctorNavSecond {
   padding: 30px;
 }
+.doctorNavSecondList {
+  gap: 3rem;
+}
+.doctorUnderlineHover {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 0rem;
+}
+.doctorUnderline::after {
+  position: absolute;
+  width: 100%;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  border-radius: 10px;
+  background: #2aa7ff;
+}

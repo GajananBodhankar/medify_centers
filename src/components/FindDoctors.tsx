@@ -16,7 +16,7 @@ function FindDoctors() {
       </nav>
       <div className="homeNavSecond doctorNavSecond">
         <img src={Medify} alt="Image not found" className="medifyImage" />
-        <CustomList match={match} />
+        <CustomList match={match} isDoctor={true} />
       </div>
     </div>
   );

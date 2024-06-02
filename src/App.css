@@ -1,8 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
-:root {   
+:root {
   --mainbgcolor: #2aa7ff;
   --fontFamily: "Poppins", sans-serif;
 }
